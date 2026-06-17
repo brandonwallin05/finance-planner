@@ -9,6 +9,9 @@ def create_app():
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///budget.db'
 
     db.init_app(app)
+    from .models import Entry
+    with app.app_context():
+        db.create_all()
     from .routes import main
     app.register_blueprint(main)
 
