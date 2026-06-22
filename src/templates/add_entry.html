@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Family Budget</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    
+
+    <form method="POST">
+        {{ form.csrf_token }}
+
+        {{ form.amount.label }}
+        {{ form.amount() }}
+
+        {{ form.entry_type.label }}
+        {{ form.entry_type() }}
+
+        {{ form.category.label }}
+        {{ form.category() }}
+
+        {{ form.date.label }}
+        {{ form.date() }}
+
+        {{ form.description.label }}
+        {{ form.description() }}
+
+        {{ form.is_recurring.label }}
+        {{ form.is_recurring() }}
+
+        {{ form.recurrence_frequency.label }}
+        {{ form.recurrence_frequency() }}
+
+        {{ form.ends_on.label }}
+        {{ form.ends_on() }}
+
+        {{ form.attached_individual.label }}
+        {{ form.attached_individual() }}
+
+        {{ form.submit() }}
+    </form>
+</body>
+</html>

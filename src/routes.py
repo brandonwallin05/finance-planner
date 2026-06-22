@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template
-from forms import EntryForm
+from .forms import EntryForm
 
 main = Blueprint('main', __name__)
 

@@ -10,5 +10,5 @@ class EntryForm(FlaskForm):
     is_recurring = BooleanField('Recurring')
     recurrence_frequency = SelectField('How often?', choices=[('daily', 'Daily'), ('weekly', 'Weekly'), ('monthly', 'Monthly'), ('annually', 'Annually')], validators=[Optional()])
     ends_on = DateField('Ends On:', validators=[Optional()])
-    submitted_by = SelectField('Submitted by:', choices=[('brandon', 'Brandon'), ('riley', 'Riley')], validators=[DataRequired()])
+    attached_individual = SelectField('Attached To:', choices=[('brandon', 'Brandon'), ('riley', 'Riley'), ('family', 'Family')], validators=[DataRequired()])
     submit = SubmitField('Submit')

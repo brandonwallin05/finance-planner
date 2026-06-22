@@ -13,5 +13,4 @@ class Entry(db.Model):
     is_recurring = db.Column(db.Boolean, default=False)
     recurrence_frequency = db.Column(db.String, nullable=True)
     ends_on = db.Column(db.Date, nullable=True)
-    submitted_by = db.Column(db.String, nullable=False)
-    attached_individual = db.Column(db.String, nullable=True)
+    attached_individual = db.Column(db.String, nullable=False)
